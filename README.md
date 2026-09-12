@@ -1,12 +1,29 @@
 # qhungbui7.github.io
 
-Personal GitHub Pages website for [qhungbui7](https://github.com/qhungbui7).
+Research-focused personal website for Quoc Hung BUI, published with GitHub Pages at [qhungbui7.github.io](https://qhungbui7.github.io/).
 
-## Publish with GitHub Pages
+The site presents selected research in reinforcement learning, autonomous driving, computer vision, and scientific computing. Its project media comes from repository artifacts and locally reproduced model checkpoints.
 
-1. Create a public repository named exactly `qhungbui7.github.io` on GitHub.
-2. Copy or push the contents of this folder to the repository’s default branch.
-3. In the repository, open **Settings → Pages** and select **Deploy from a branch**.
-4. Select the default branch and the `/ (root)` folder, then save.
+## Editing content
 
-The site should become available at `https://qhungbui7.github.io/` after GitHub finishes the deployment.
+Edit [`content.json`](content.json) to update the introduction, portrait, project cards, work experience, education, publications, contact details, and footer. The browser renders this data through `script.js`, so routine content changes do not require editing the HTML.
+
+Local images and animations belong in `files/`. After replacing an asset, update its `src` in `content.json` and remove superseded files that are no longer referenced.
+
+## Local preview
+
+Because browsers block JSON loading from a direct `file://` URL, preview the site through a local server:
+
+```bash
+python3 -m http.server 8000 --bind 127.0.0.1
+```
+
+Then open `http://127.0.0.1:8000/`.
+
+## Deployment
+
+The repository is deployed from the `main` branch as a GitHub Pages user site. Push reviewed changes to `main`; GitHub Pages then serves the repository root at `https://qhungbui7.github.io/`.
+
+There is intentionally no `CNAME` file because the site uses the standard `.github.io` address.
+
+`changelog.md` is a local working record and is intentionally excluded from Git.

@@ -1,0 +1,175 @@
+{
+  "site": {
+    "title": "Quoc Hung BUI",
+    "description": "Quoc Hung BUI — AI Researcher.",
+    "brand": "Quoc Hung BUI",
+    "navigation": [
+      { "label": "Research", "href": "#research" },
+      { "label": "Background", "href": "#background" },
+      { "label": "Contact", "href": "#contact" }
+    ]
+  },
+  "hero": {
+    "eyebrow": "AI Researcher",
+    "title": "Researching learning systems, scientific computing, and computer vision.",
+    "description": "I work on models and systems that learn from limited, noisy, or changing information. This page collects my research projects, papers, and selected work.",
+    "portrait": {
+      "src": "files/profile.jpg",
+      "alt": "Portrait of Quoc Hung BUI"
+    },
+    "links": [
+      { "label": "GitHub ↗", "href": "https://github.com/qhungbui7" },
+      { "label": "ORCID ↗", "href": "https://orcid.org/0009-0003-1886-8457" }
+    ]
+  },
+  "research": {
+    "eyebrow": "Research",
+    "note": "Selected repositories and artifacts",
+    "projects": [
+      {
+        "type": "Autonomous driving and reinforcement learning",
+        "title": "3D-First MetaDrive Baseline",
+        "description": "A reproducible autonomous-driving study in the MetaDrive simulator. The vehicle learns from LiDAR and navigation state, with standard PPO compared against recurrent PPO with LSTM memory. The repository also includes IDM demonstrations, evaluation on unseen road scenarios, and driving replay tools.",
+        "repository": "https://github.com/qhungbui7/3ds",
+        "artifact": {
+          "src": "files/3ds-local-best-replay.gif",
+          "alt": "Animated top-down replay of an autonomous vehicle driving in the MetaDrive simulator",
+          "caption": "Top-down replay from the best locally reproduced PPO checkpoint on a held-out scenario."
+        },
+        "compactMedia": true
+      },
+      {
+        "type": "Autonomous driving and adaptive memory",
+        "title": "CarRacing Research Sandbox",
+        "description": "A research sandbox for testing adaptive memory and PPO-style agents on changing control problems, including CarRacing. It contains benchmark configurations, recurrent and feed-forward baselines, training plots, evaluation tools, and gameplay-recording utilities.",
+        "repository": "https://github.com/qhungbui7/sandbox",
+        "artifact": {
+          "src": "files/sandbox-carracing-local-best.gif",
+          "alt": "CarRacing gameplay from the best locally reproduced continuous-action PPO checkpoint",
+          "caption": "Stochastic gameplay from the best locally reproduced continuous-action PPO checkpoint."
+        },
+        "compactMedia": true
+      },
+      {
+        "type": "Reinforcement learning",
+        "title": "Adaptive Memory Traces",
+        "description": "Research on how agents adapt to non-stationary dynamics under partial observability, using exponential memory traces, drift monitoring, and controlled experiments.",
+        "repository": "https://github.com/qhungbui7/amt",
+        "artifacts": [
+          {
+            "src": "files/amt-pocartpole-best-eval.gif",
+            "alt": "AMT agent balancing a pole in the partially observable Position-Only CartPole benchmark",
+            "caption": "Position-Only CartPole — deterministic replay from the best-evaluation checkpoint of a full local AMT reproduction."
+          },
+          {
+            "src": "files/amt-popendulum-best-eval.gif",
+            "alt": "AMT agent controlling a pendulum while observing position without angular velocity",
+            "caption": "Position-Only Pendulum — deterministic replay from the best-evaluation checkpoint of a full local AMT reproduction."
+          }
+        ]
+      },
+      {
+        "type": "Scientific computing",
+        "title": "Nonlinear Schrödinger Equations",
+        "description": "Numerical comparison of full PDE simulations with an ODE model derived from the Non-Conservative Variational Approximation for soliton dynamics.",
+        "repository": "https://github.com/qhungbui7/variational-approximation-nlse",
+        "artifact": {
+          "src": "files/nlse-pde-vs-ode.png",
+          "alt": "PDE and NCVA ODE comparison plots"
+        }
+      },
+      {
+        "type": "Numerical methods",
+        "title": "Numerical Differentiation",
+        "description": "FFT-based derivatives for real and complex functions, checked against exact derivatives and finite-difference references with saved plots.",
+        "repository": "https://github.com/qhungbui7/advanced-physics-simulations",
+        "artifact": {
+          "src": "files/fft-derivatives.png",
+          "alt": "Exact and numerical derivative comparisons"
+        }
+      },
+      {
+        "type": "Computer vision and robotics",
+        "title": "RGB-D Pose Estimation",
+        "description": "A classical end-to-end RGB-D baseline for rigid-part detection and 6-DoF pose estimation. It combines colour and depth clustering with geometric pose hypotheses, trimmed ICP refinement, and depth and silhouette verification against a CAD model.",
+        "repository": "https://github.com/qhungbui7/6-DoF-pose-estimation",
+        "artifact": {
+          "src": "files/rgbd-pose-prediction.png",
+          "alt": "Predicted object silhouettes and 6-DoF pose axes on a held-out RGB-D validation scene",
+          "caption": "End-to-end baseline predictions on the strongest clean held-out validation scene; coloured outlines and axes are model outputs."
+        }
+      }
+    ]
+  },
+  "background": {
+    "eyebrow": "Background",
+    "note": "Experience and education",
+    "experience": [
+      {
+        "role": "Research Engineer",
+        "company": "Trusting Social",
+        "location": "Vietnam",
+        "period": "2025 — 2026",
+        "description": "Researched and built computer-vision systems for eKYC, including liveness and deepfake analysis, document detection and classification, image-quality modelling, and vision-language OCR experiments."
+      },
+      {
+        "role": "AI Engineer",
+        "company": "Undisclosed hedge fund",
+        "location": "Vietnam",
+        "period": "2024 — 2025",
+        "description": "Built research data pipelines, LLM-based market-signal workflows, scalable backtesting infrastructure, trade monitoring, and numerical methods for strategy allocation and hedging."
+      },
+      {
+        "role": "Data Scientist",
+        "company": "VieON · DatvietVAC",
+        "location": "Vietnam",
+        "period": "2023",
+        "description": "Developed semantic-search benchmarks and query-processing models for Vietnamese media discovery, then optimized model inference for deployment."
+      },
+      {
+        "role": "AI Researcher Intern",
+        "company": "Kyanon Digital",
+        "location": "Vietnam",
+        "period": "2022",
+        "description": "Experimented with self-supervised image retrieval, embedding indexes for small e-commerce datasets, and language-model fine-tuning for social-media sentiment analysis."
+      }
+    ],
+    "education": [
+      {
+        "degree": "MSc in Artificial Intelligence",
+        "institution": "Université Paris-Saclay",
+        "period": "2026 — 2028",
+        "logo": {
+          "src": "https://www.universite-paris-saclay.fr/sites/default/files/media/2019-12/logo-ups.svg",
+          "alt": "Université Paris-Saclay logo"
+        }
+      },
+      {
+        "degree": "Bachelor of Information Technology",
+        "institution": "VNUHCM — University of Science",
+        "period": "2020 — 2024",
+        "logo": {
+          "src": "https://hcmus.edu.vn/wp-content/uploads/2023/04/Logo-chinh-e1681638380305.png",
+          "alt": "VNUHCM University of Science logo"
+        }
+      }
+    ],
+    "publications": [
+      {
+        "title": "Fusing global attention and self-attention for better performance and interpretability on tabular data.",
+        "venue": "Expert Systems With Applications."
+      },
+      {
+        "title": "GANet — Learning tabular data using global attention.",
+        "venue": "Oral presentation at ICCCI."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "name": "Quoc Hung BUI",
+    "description": "For research conversations, collaborations, or interesting technical problems.",
+    "email": "bqhung127@gmail.com"
+  },
+  "footer": ["Quoc Hung BUI", "qhungbui7.github.io"]
+}
