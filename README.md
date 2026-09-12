@@ -2,7 +2,7 @@
 
 Research-focused personal website for Quoc Hung BUI, published with GitHub Pages at [qhungbui7.github.io](https://qhungbui7.github.io/).
 
-The site presents selected research in reinforcement learning, autonomous driving, computer vision, and scientific computing. Its project media comes from repository artifacts and locally reproduced model checkpoints.
+The site presents selected research in reinforcement learning, autonomous driving, scientific computing, and robotics. Its project media comes from repository artifacts and locally reproduced model checkpoints.
 
 ## Editing content
 

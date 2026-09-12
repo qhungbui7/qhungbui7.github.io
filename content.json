@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Quoc Hung BUI",
-    "description": "Quoc-Hung Bui is an AI researcher working on reinforcement learning, adaptive learning systems, and computer vision.",
+    "description": "Quoc-Hung Bui is an AI researcher working on reinforcement learning, partial observability, and changing environments.",
     "url": "https://qhungbui7.github.io/",
     "brand": "Quoc Hung BUI",
     "navigation": [
@@ -14,8 +14,8 @@
   },
   "hero": {
     "eyebrow": "AI Researcher",
-    "title": "Researching adaptive learning systems for partial and changing information.",
-    "description": "I work on reinforcement learning, adaptive memory, representation learning, and computer vision, with supporting interests in scientific computing and reliable learning systems.",
+    "title": "Researching reinforcement learning in partial and changing environments.",
+    "description": "I study how agents make decisions with limited information and changing dynamics, with supporting interests in scientific computing and reliable learning systems.",
     "portrait": {
       "src": "files/profile.jpg",
       "alt": "Portrait of Quoc Hung BUI"
@@ -33,18 +33,16 @@
       "Reinforcement learning",
       "Non-stationary environments",
       "Partial observability",
-      "Adaptive memory",
-      "Sequential decision-making",
-      "Representation learning",
-      "Computer vision"
+      "Sequential decision-making"
     ],
     "projects": [
       {
         "type": "Autonomous driving and reinforcement learning",
+        "section": "core",
         "title": "3D-First MetaDrive Baseline",
         "description": "A reproducible autonomous-driving study in the MetaDrive simulator. The vehicle learns from LiDAR and navigation state, with standard PPO compared against recurrent PPO with LSTM memory. The repository also includes IDM demonstrations, evaluation on unseen road scenarios, and driving replay tools.",
         "approach": "LiDAR and navigation state · PPO and recurrent PPO · held-out road scenarios",
-        "result": "A controlled simulator study of memory and generalization for autonomous driving.",
+        "focus": "Memory and generalization under held-out road layouts.",
         "repository": "https://github.com/qhungbui7/3ds",
         "artifact": {
           "src": "files/3ds-local-best-replay.gif",
@@ -54,11 +52,12 @@
         "compactMedia": true
       },
       {
-        "type": "Autonomous driving and adaptive memory",
+        "type": "Autonomous driving and reinforcement learning",
+        "section": "core",
         "title": "CarRacing Research Sandbox",
-        "description": "A research sandbox for testing adaptive memory and PPO-style agents on changing control problems, including CarRacing. It contains benchmark configurations, recurrent and feed-forward baselines, training plots, evaluation tools, and gameplay-recording utilities.",
-        "approach": "Continuous-control PPO · adaptive memory experiments · recorded gameplay",
-        "result": "A reusable environment for comparing memory mechanisms under changing visual control conditions.",
+        "description": "A research sandbox for testing memory mechanisms and PPO-style agents on changing control problems, including CarRacing. It contains benchmark configurations, recurrent and feed-forward baselines, training plots, evaluation tools, and gameplay-recording utilities.",
+        "approach": "Continuous-control PPO · memory experiments · recorded gameplay",
+        "focus": "Comparing memory mechanisms under changing visual control conditions.",
         "repository": "https://github.com/qhungbui7/sandbox",
         "artifact": {
           "src": "files/sandbox-carracing-local-best.gif",
@@ -69,10 +68,11 @@
       },
       {
         "type": "Reinforcement learning",
+        "section": "core",
         "title": "Adaptive Memory Traces",
         "description": "Research on how agents adapt to non-stationary dynamics under partial observability, using exponential memory traces, drift monitoring, and controlled experiments.",
         "approach": "PPO · exponential feature traces · recurrent and frame-history controls",
-        "result": "Local replays make the learned behavior inspectable across Position-Only CartPole and Pendulum tasks.",
+        "focus": "Inspecting learned behavior across Position-Only CartPole and Pendulum tasks.",
         "repository": "https://github.com/qhungbui7/amt",
         "artifacts": [
           {
@@ -89,10 +89,11 @@
       },
       {
         "type": "Scientific computing",
+        "section": "technical",
         "title": "Nonlinear Schrödinger Equations",
         "description": "Numerical comparison of full PDE simulations with an ODE model derived from the Non-Conservative Variational Approximation for soliton dynamics.",
         "approach": "PDE simulation · variational reduction · trajectory comparison",
-        "result": "A numerical study of when a reduced dynamical model tracks the full wave simulation.",
+        "focus": "When a reduced dynamical model tracks the full wave simulation.",
         "repository": "https://github.com/qhungbui7/variational-approximation-nlse",
         "artifact": {
           "src": "files/nlse-pde-vs-ode.png",
@@ -101,10 +102,11 @@
       },
       {
         "type": "Numerical methods",
+        "section": "technical",
         "title": "Numerical Differentiation",
         "description": "FFT-based derivatives for real and complex functions, checked against exact derivatives and finite-difference references with saved plots.",
         "approach": "Spectral differentiation · real and complex test functions · reference checks",
-        "result": "A compact numerical-methods study with reproducible error and derivative visualizations.",
+        "focus": "Reproducible error and derivative visualizations for spectral methods.",
         "repository": "https://github.com/qhungbui7/advanced-physics-simulations",
         "artifact": {
           "src": "files/fft-derivatives.png",
@@ -112,11 +114,12 @@
         }
       },
       {
-        "type": "Computer vision and robotics",
+        "type": "Robotics and perception",
+        "section": "technical",
         "title": "RGB-D Pose Estimation",
         "description": "A classical end-to-end RGB-D baseline for rigid-part detection and 6-DoF pose estimation. It combines colour and depth clustering with geometric pose hypotheses, trimmed ICP refinement, and depth and silhouette verification against a CAD model.",
         "approach": "RGB-D segmentation · CAD geometry · ICP refinement · silhouette verification",
-        "result": "A transparent geometric baseline whose predicted masks, axes, and pose checks can be inspected directly.",
+        "focus": "A transparent geometric baseline with inspectable masks, axes, and pose checks.",
         "repository": "https://github.com/qhungbui7/6-DoF-pose-estimation",
         "artifact": {
           "src": "files/rgbd-pose-prediction.png",

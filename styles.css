@@ -50,6 +50,7 @@ h2 { margin-bottom: 1rem; font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 40
 .research-item.project-even { grid-template-columns: 1.15fr 0.85fr; }
 .research-item.project-even .research-text { order: 2; }
 .research-interests { padding: 0 0 2.5rem; }
+.research-subsection + .research-subsection { margin-top: 3.5rem; }
 .subheading { margin: 0 0 0.8rem; color: var(--muted); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; }
 .interest-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .interest-list span { padding: 0.35rem 0.55rem; border: 1px solid var(--line); color: var(--muted); font-size: 0.82rem; }

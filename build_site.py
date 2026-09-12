@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 CONTENT_PATH = ROOT / "content.json"
 OUTPUT_PATH = ROOT / "index.html"
-STYLESHEET = "styles.css?v=20260912-3"
+STYLESHEET = "styles.css?v=20260912-4"
 
 
 def text(value: object) -> str:
@@ -56,9 +56,9 @@ def project_markup(project: dict[str, object], index: int) -> str:
         details.append(
             f'<div class="project-detail"><span>Approach</span><p>{text(project["approach"])}</p></div>'
         )
-    if project.get("result"):
+    if project.get("focus"):
         details.append(
-            f'<div class="project-detail"><span>Result</span><p>{text(project["result"])}</p></div>'
+            f'<div class="project-detail"><span>Focus</span><p>{text(project["focus"])}</p></div>'
         )
     details_markup = f'<div class="project-details">{"".join(details)}</div>' if details else ""
     return (
@@ -87,6 +87,19 @@ def section(heading: str, note: str, body: str, section_id: str) -> str:
     )
 
 
+def project_group(label: str, projects: list[dict[str, object]], start_index: int) -> str:
+    rendered = "".join(
+        project_markup(project, index)
+        for index, project in enumerate(projects, start=start_index)
+    )
+    return (
+        '<div class="research-subsection">'
+        f'<p class="subheading">{text(label)}</p>'
+        f'<div class="research-list">{rendered}</div>'
+        '</div>'
+    )
+
+
 def render(content: dict[str, object]) -> str:
     site = content["site"]
     hero = content["hero"]
@@ -106,12 +119,14 @@ def render(content: dict[str, object]) -> str:
         else ""
     )
     interests = "".join(f'<span>{text(item)}</span>' for item in research.get("interests", []))
-    projects = "".join(project_markup(project, index) for index, project in enumerate(research["projects"]))
+    core_projects = [project for project in research["projects"] if project.get("section") == "core"]
+    technical_projects = [project for project in research["projects"] if project.get("section") == "technical"]
 
     research_body = (
         f'<div class="research-interests"><p class="subheading">Research interests</p>'
         f'<div class="interest-list">{interests}</div></div>'
-        f'<div class="research-list">{projects}</div>'
+        f'{project_group("Core research", core_projects, 0)}'
+        f'{project_group("Selected technical work", technical_projects, len(core_projects))}'
     )
 
     publication_items = []
