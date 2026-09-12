@@ -6,7 +6,15 @@ The site presents selected research in reinforcement learning, autonomous drivin
 
 ## Editing content
 
-Edit [`content.json`](content.json) to update the introduction, portrait, project cards, work experience, education, publications, contact details, and footer. The browser renders this data through `script.js`, so routine content changes do not require editing the HTML.
+Edit [`content.json`](content.json) to update the introduction, portrait, project cards, work experience, education, publications, contact details, and footer. The JSON is the source of truth; `index.html` is the generated static page.
+
+After editing the JSON, regenerate the page:
+
+```bash
+python3 build_site.py
+```
+
+The generated HTML contains the visible content directly, so the site does not depend on JavaScript or a loading state.
 
 Local images and animations belong in `files/`. After replacing an asset, update its `src` in `content.json` and remove superseded files that are no longer referenced.
 
@@ -22,7 +30,7 @@ Then open `http://127.0.0.1:8000/`.
 
 ## Deployment
 
-The repository is deployed from the `main` branch as a GitHub Pages user site. Push reviewed changes to `main`; GitHub Pages then serves the repository root at `https://qhungbui7.github.io/`.
+The repository is deployed from the `main` branch as a GitHub Pages user site. Regenerate `index.html`, review the result, and push the reviewed changes to `main`; GitHub Pages then serves the repository root at `https://qhungbui7.github.io/`.
 
 There is intentionally no `CNAME` file because the site uses the standard `.github.io` address.
 
