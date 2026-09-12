@@ -176,6 +176,12 @@ def render(content: dict[str, object]) -> str:
         )
 
     contact = content["contact"]
+    contact_image = contact.get("image")
+    contact_background = (
+        f'<img class="contact-background" src="{href(contact_image["src"])}" alt="" aria-hidden="true">'
+        if contact_image
+        else ""
+    )
     footer = "".join(f"<span>{text(item)}</span>" for item in content["footer"])
     return f'''<!doctype html>
 <html lang="en">
@@ -219,10 +225,13 @@ def render(content: dict[str, object]) -> str:
       {section("Experience", "Research and engineering", f'<div class="resume-block">{"".join(experience_items)}</div>', "experience")}
       {section("Education", "Academic background", f'<div class="resume-block">{"".join(education_items)}</div>', "education")}
       <section class="contact container" id="contact">
-        <p class="eyebrow">{text(contact["eyebrow"])}</p>
-        <h2>{text(contact["name"])}</h2>
-        <p class="intro">{text(contact["description"])}</p>
-        <a class="email" href="mailto:{href(contact["email"])}">{text(contact["email"])}</a>
+        {contact_background}
+        <div class="contact-content">
+          <p class="eyebrow">{text(contact["eyebrow"])}</p>
+          <h2>{text(contact["name"])}</h2>
+          <p class="intro">{text(contact["description"])}</p>
+          <a class="email" href="mailto:{href(contact["email"])}">{text(contact["email"])}</a>
+        </div>
       </section>
     </main>
     <footer class="site-footer container">{footer}</footer>

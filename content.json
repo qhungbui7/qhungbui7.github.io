@@ -72,7 +72,7 @@
         "title": "Adaptive Memory Traces",
         "description": "Research on how agents adapt to non-stationary dynamics under partial observability, using exponential memory traces, drift monitoring, and controlled experiments.",
         "approach": "PPO · exponential feature traces · recurrent and frame-history controls",
-        "focus": "Inspecting learned behavior across Position-Only CartPole and Pendulum tasks.",
+        "focus": "Inspecting learned behavior across partially observable tasks.",
         "repository": "https://github.com/qhungbui7/amt",
         "artifacts": [
           {
@@ -207,7 +207,11 @@
     "eyebrow": "Contact",
     "name": "Quoc Hung BUI",
     "description": "For research conversations, collaborations, or interesting technical problems.",
-    "email": "bqhung127@gmail.com"
+    "email": "bqhung127@gmail.com",
+    "image": {
+      "src": "files/20260910_083711.jpg",
+      "alt": "Université Paris-Saclay campus display about Nobel Prize researchers"
+    }
   },
   "footer": ["Quoc Hung BUI", "qhungbui7.github.io"]
 }
